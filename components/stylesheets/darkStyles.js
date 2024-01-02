@@ -1,21 +1,21 @@
-import {StyleSheet} from 'react-native'
+import { StyleSheet } from "react-native";
 
-const styles = StyleSheet.create({
+const darkStyles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#fff4e8',
+      backgroundColor: '#030303',
       alignItems: 'center',
       justifyContent: 'center',
     },
     mainText: {
-      color: '#000',
+      color: '#fff',
       fontSize: 30
     },
     profileText: {
-      color: '#0f06ba',
+      color: 'yellow',
       fontSize: 20,
       fontWeight: '500',
     }
-  });
+});
 
-  export default styles
+export default darkStyles

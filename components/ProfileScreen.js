@@ -1,13 +1,15 @@
 import {View, Text, Button} from 'react-native'
 import styles from './stylesheets/styles';
+import darkStyles from './stylesheets/darkStyles';
 
-const ProfileScreen = ({navigation}) => {
+const ProfileScreen = ({route, navigation}) => {
+    const {darkMode, setDarkMode} = route.params
     return (
-      <View style={styles.container}>
-        <Text style={styles.profileText}>Welcome to the Profile Page!</Text>
+      <View style={darkMode ? darkStyles.container : styles.container}>
+        <Text style={darkMode ? darkStyles.profileText : styles.profileText}>Welcome to the Profile Page!</Text>
         <Button
             title="Go back Home"
-            onPress={()=>{navigation.navigate('Home')}} 
+            onPress={()=>{navigation.navigate('Home', {darkMode: darkMode, setDarkMode: setDarkMode})}} 
         />
       </View>
     );
